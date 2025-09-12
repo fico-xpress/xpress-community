@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build_cpp",
+            "type": "shell",
+            "command": "C:\\Users\\Marco\\Documents\\Marco\\University\\MSc Operations Research & Analytics\\MA425 - PROJECT\\Bike-Sharing Report\\MSc_OR_SummerProject_2024\\.vscode\\setup_env.bat",
+            "args": [
+                "${file}",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$msCompile"]
+        }
+    ]
+}
