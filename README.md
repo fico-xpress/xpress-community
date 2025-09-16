@@ -25,24 +25,38 @@ Your contributions can include:
 
 ### How to Contribute
 
-1. **Clone the repository** to your local machine:
+1. **Fork the repository** to your GitHub account:
+   - Go to the [GitHub page](https://github.com/fico-xpress/xpress-community) and click “Fork” in the top-right corner to create your own copy.
+
+2. **Clone your forked repository** to your local machine:
    ```bash
-   git clone https://github.com/fico-xpress/xpress-community.git
+   git clone https://github.com/<your-username>/xpress-community.git
+   cd xpress-community
    ```
 
-2. **Fork the repository** and create your feature branch:  
+3. **Create a new feature branch** for your contribution:  
    ```bash
    git checkout -b feature/my-new-example
    ```
    
-3. **Add your contribution** in a clearly organized and properly named subfolder. Please include:
+4. **Add your contribution** in a clearly organized and properly named *subfolder*. Please include:
    - A brief `README.md` explaining the purpose, setup, and usage
    - Any required input data or configuration files
    - Comments or documentation in code where appropriate
+   - **Ensure compatibility** with the latest version of Xpress, and **please submit models than can be executed with the Xpress community license** whenever possible.
 
-4. **Ensure compatibility** with the latest version of Xpress and its APIs, and **please submit models than can be executed with the Xpress community license** whenever possible.
+5. Stage and commit your changes:
+   ```bash
+   git add .
+   git commit -m "Add example: [short description of your project]"
+   ```
 
-5. **Submit a pull request** with a clear and descriptive summary of your proposal.
+6. **Push your branch** to your fork:
+   ```bash
+   git push origin feature/my-new-example
+   ```
+
+7. **Submit a pull request**: Go to your fork on GitHub, you’ll see a prompt to open a pull request. Please include a clear and descriptive summary of your proposal.
 
 ## Legal
 
