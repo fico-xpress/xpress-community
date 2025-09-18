@@ -58,6 +58,8 @@ Your contributions can include:
 
 7. **Submit a pull request**: Go to your fork on GitHub, you’ll see a prompt to open a pull request. Please include a clear and descriptive summary of your proposal.
 
+All contributions to the FICO Xpress Community repository are subject to review by FICO staff to ensure quality, relevance, and compliance with community standards.
+
 ## Legal
 
 See source code files for copyright notices.
