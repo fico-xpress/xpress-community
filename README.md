@@ -26,7 +26,7 @@ Your contributions can include:
 ### How to Contribute
 
 1. **Fork the repository** to your GitHub account:
-   - Go to the [GitHub page](https://github.com/fico-xpress/xpress-community) and click “Fork” in the top-right corner to create your own copy.
+   - Go to the [GitHub page](https://github.com/fico-xpress/xpress-community) and click “Fork” in the top-right corner to create your own copy
 
 2. **Clone your forked repository** to your local machine:
    ```bash
@@ -43,7 +43,7 @@ Your contributions can include:
    - A brief `README.md` explaining the purpose, setup, and usage
    - Any required input data or configuration files
    - Comments or documentation in code where appropriate
-   - **Ensure compatibility** with the latest version of Xpress, and **please submit models than can be executed with the Xpress community license** whenever possible.
+   - **Ensure compatibility** with the latest version of Xpress, and **please submit models than can be executed with the Xpress community license** whenever possible
 
 5. Stage and commit your changes:
    ```bash
@@ -56,7 +56,10 @@ Your contributions can include:
    git push origin feature/my-new-example
    ```
 
-7. **Submit a pull request**: Go to your fork on GitHub, you’ll see a prompt to open a pull request. Please include a clear and descriptive summary of your proposal.
+7. **Submit a pull request**: Go to your fork on GitHub, you’ll see a prompt to open a pull request. Click *Compare & pull request*, then:
+   - Set the base repository to `fico-xpress/xpress-community`
+   - Set the base branch to `main`
+   - Please include a clear and descriptive summary of your contribution and click *Create pull request*
 
 All contributions to the FICO Xpress Community repository are subject to review by FICO staff to ensure quality, relevance, and compliance with community standards.
 
