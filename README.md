@@ -6,6 +6,7 @@ Project name | Description | Contributor | Date
 -------------|-------------|-------------|-----|
 [Bike Rebalancing Problem](BikeRebalancingProblem) | Rebalancing London's Bike-Sharing System: A FICO Xpress C++ API Case Study | Marco Deken | August 2024
 [Vessel Schedule Recovery Problem](VesselSchedulingProblem) | An extended optimization model for the vessel schedule recovery problem | Jingwen He | August 2025
+[Soccer Camp Location Problem](SoccerCampLocation) | Locating Soccer Camps at potential parks over a season | Carlos A. Zetina | November 2025
 
 ***Find detailed information about each project in the README file of the corresponding folder**.
 

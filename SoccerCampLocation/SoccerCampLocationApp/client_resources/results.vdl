@@ -1,0 +1,72 @@
+<!--
+    Copyright (c) 2025 Fair Isaac Corporation
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
+    Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+-->
+
+<vdl version="5">
+    <vdl-page>
+        <vdl-header>
+            <vdl-action-group name="executeLoad">
+                <vdl-action-execute mode="LOAD"></vdl-action-execute>
+            </vdl-action-group>
+            <vdl-action-group name="executeRun">
+                <vdl-action-execute></vdl-action-execute>
+            </vdl-action-group>
+        </vdl-header>
+        <vdl-section>
+            <vdl-row>
+                <vdl-column size="12">
+                    <vdl-container>
+                        <vdl-button vdl-event="click: actions.executeRun" label="Run Simulation"></vdl-button>
+                    </vdl-container>
+                </vdl-column>
+            </vdl-row>
+        </vdl-section>
+        <vdl-section heading="='Simulation Results for ' + scenario.props.name" vdl-if="=scenario.summaryData.hasResultData">
+            <vdl-row>
+                <vdl-column vdl-if="=scenario.summaryData.hasResultData" size="6" heading="Soccer Camps">
+                    <vdl-chart>
+                        <vdl-chart-series type="pie" entity-x="Summary_open_trucks" entity="Summary_iteration"></vdl-chart-series>
+                    </vdl-chart>
+                </vdl-column>
+                <vdl-column vdl-if="=scenario.summaryData.hasResultData" size="6">
+                    <vdl-table page-mode="paged" page-size="20" show-filter="true">
+                        <vdl-table-column entity="Summary_open_trucks"></vdl-table-column>
+                        <vdl-table-column entity="Summary_iteration"></vdl-table-column>
+                        <vdl-table-column entity="Summary_objective_value"></vdl-table-column>
+                        <vdl-table-column entity="Summary_total_missed_demand"></vdl-table-column>
+                    </vdl-table>
+                </vdl-column>
+            </vdl-row>
+            <vdl-row>
+                <vdl-column heading="Simulation Progress" vdl-if="=scenario.summaryData.hasResultData">
+                    <vdl-chart>
+                        <vdl-chart-series entity="Result_objective_value" type="line"></vdl-chart-series>
+                        <vdl-chart-series type="line" entity="Result_truck_installation_value"></vdl-chart-series>
+                        <vdl-chart-series type="line" entity="Result_total_serving_cost"></vdl-chart-series>
+                        <vdl-chart-series entity="Result_total_missed_demand" type="line"></vdl-chart-series>
+                    </vdl-chart>
+                </vdl-column>
+            </vdl-row>
+            <vdl-row>
+                <vdl-column vdl-if="=scenario.summaryData.hasResultData">
+                    <vdl-chart title="Average Total Cost">
+                        <vdl-chart-series entity-x="Summary_open_trucks" entity="Summary_objective_value" vdl-visible="=scenario.entities.Summary_iteration.values > 4"></vdl-chart-series>
+                    </vdl-chart>
+                </vdl-column>
+            </vdl-row>
+            <vdl-row>
+                <vdl-column heading="Simulation Progress" vdl-if="=scenario.summaryData.hasResultData">
+                    <vdl-table>
+                        <vdl-table-column entity="Result_open_trucks"></vdl-table-column>
+                        <vdl-table-column entity="Result_objective_value"></vdl-table-column>
+                        <vdl-table-column entity="Result_total_missed_demand"></vdl-table-column>
+                        <vdl-table-column entity="Result_total_serving_cost"></vdl-table-column>
+                        <vdl-table-column entity="Result_truck_installation_value"></vdl-table-column>
+                    </vdl-table>
+                </vdl-column>
+            </vdl-row>
+        </vdl-section>
+    </vdl-page>
+</vdl>
