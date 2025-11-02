@@ -1,0 +1,57 @@
+<!--
+    Copyright (c) 2025 Fair Isaac Corporation
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
+    Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+-->
+
+<vdl version="5">
+    <vdl-page>
+        <vdl-header>
+            <vdl-action-group name="RunModel">
+                <vdl-action-execute mode="LOAD"></vdl-action-execute>
+            </vdl-action-group>
+        </vdl-header>
+        <vdl-section heading="Simulation Configuration">
+            <vdl-row>
+                <vdl-column>
+                    <vdl-button vdl-event="click:actions.RunModel" label="Load Data"></vdl-button>
+                </vdl-column>
+            </vdl-row>
+            <vdl-row>
+                <vdl-column size="6">
+                    <vdl-form>
+                        <vdl-field label="Number of days" label-size="4" entity="SimulationLimit"></vdl-field>
+                    </vdl-form>
+                </vdl-column>
+                <vdl-column size="6">
+                    <vdl-form>
+                        <vdl-field label="Update Step Size" label-size="5" entity="StepSize"></vdl-field>
+                    </vdl-form>
+                </vdl-column>
+            </vdl-row>
+        </vdl-section>
+        <vdl-section heading="Input Data">
+            <vdl-row>
+                <vdl-column size="6" heading="School information">
+                    <vdl-table>
+                        <vdl-table-column entity="Schools_demand_mean_estimate" editable="true"></vdl-table-column>
+                        <vdl-table-column entity="Schools_demand_var_estimate" editable="true"></vdl-table-column>
+                        <vdl-table-column entity="Schools_demand_mean_real" editable="true"></vdl-table-column>
+                        <vdl-table-column entity="Schools_demand_var_real" editable="true"></vdl-table-column>
+                    </vdl-table>
+                </vdl-column>
+                <vdl-column size="6" heading="Potential Sites Information">
+                    <vdl-table>
+                        <vdl-table-column entity="Sites_capacity" editable="true"></vdl-table-column>
+                        <vdl-table-column entity="Sites_cost" editable="true"></vdl-table-column>
+                    </vdl-table>
+                </vdl-column>
+            </vdl-row>
+        </vdl-section>
+        <vdl-section heading="Location Map">
+            <vdl-row>
+                <vdl-column><img src="images/instance.png"></vdl-column>
+            </vdl-row>
+        </vdl-section>
+    </vdl-page>
+</vdl>

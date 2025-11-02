@@ -1,0 +1,68 @@
+/*
+    Styling for welcome page template
+    Copyright (c) 2020-2023 Fair Isaac Corporation. All rights reserved.
+*/
+body, #welcome
+{
+    margin-right: 0px ;
+    padding-right: 0px ;
+}
+body, #main, vdl-page, vdl-section, .section-body, vdl-row, vdl-column, .column-body
+{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+vdl-column:first-child
+{
+    padding: 0px 0px 0px 0px;
+}
+vdl-column:first-child .column-body
+{
+     overflow-x: visible;
+     overflow-y: auto;
+     display: block !important;
+     padding-left: 15px;
+     padding-right: 15px;
+     padding-bottom: 15px;
+}
+vdl-column:first-child .column-body p
+{
+    margin-right: 15px;
+}
+vdl-column:nth-child(2) .column-body
+{
+    overflow: hidden;
+    display: block !important;
+}
+#welcome_image_column
+{
+    padding: 0px 0px 0px 0px;
+}
+#welcome_image img
+{
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+}
+#welcome_image
+{
+    position: relative;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+
+}
+#welcome_image .caption
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+#filler
+{
+    background-color: #3F5967;
+    width: 100%;
+    height:100%;
+    margin: 0px 0px 0px 0px;
+}

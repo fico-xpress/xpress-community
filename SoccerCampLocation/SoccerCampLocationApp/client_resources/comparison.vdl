@@ -1,0 +1,48 @@
+<!--
+    Copyright (c) 2025 Fair Isaac Corporation
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
+    Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+-->
+
+<vdl version="5">
+    <vdl-page>
+        <vdl-section heading="Comparison">
+            <vdl-row>
+                <vdl-column>
+                    <vdl-table>
+                        <vdl-table-column entity="Summary_open_trucks" scenario="=i" vdl-repeat="=s,i in scenarios" heading="='Open Trucks ' + s.props.name"></vdl-table-column>
+                        <vdl-table-column entity="Summary_iteration" scenario="=i" vdl-repeat="=s,i in scenarios" heading="='Frequency ' + s.props.name"></vdl-table-column>
+                        <vdl-table-column entity="Summary_objective_value" scenario="=i" vdl-repeat="=s,i in scenarios" heading="='Avg Total Cost ' + s.props.name"></vdl-table-column>
+                        <vdl-table-column entity="Summary_total_missed_demand" scenario="=i" vdl-repeat="=s,i in scenarios" heading="='Avg Excluded Participants ' + s.props.name"></vdl-table-column>
+                    </vdl-table>
+                </vdl-column>
+            </vdl-row>
+            <vdl-row>
+                <vdl-column size="6">
+                    <vdl-chart title="Best solutions comparison: Average Cost">
+                        <vdl-chart-series type="line" scenario="=i" vdl-repeat="=s,i in scenarios" entity="Summary_objective_value"></vdl-chart-series>
+                    </vdl-chart>
+                </vdl-column>
+                <vdl-column size="6">
+                    <vdl-chart title="Best solutions comparison: Average Excluded">
+                        <vdl-chart-series type="line" scenario="=i" vdl-repeat="=s,i in scenarios" entity="Summary_total_missed_demand"></vdl-chart-series>
+                    </vdl-chart>
+                </vdl-column>
+            </vdl-row>
+            <vdl-row>
+                <vdl-column>
+                    <vdl-chart title="Total Cost Progress">
+                        <vdl-chart-series entity="Result_objective_value" type="line" scenario="=i" vdl-repeat="=s,i in scenarios"></vdl-chart-series>
+                    </vdl-chart>
+                </vdl-column>
+            </vdl-row>
+            <vdl-row>
+                <vdl-column>
+                    <vdl-chart title="Excluded Participants Progress">
+                        <vdl-chart-series type="line" scenario="=i" vdl-repeat="=s,i in scenarios" entity="Result_total_missed_demand"></vdl-chart-series>
+                    </vdl-chart>
+                </vdl-column>
+            </vdl-row>
+        </vdl-section>
+    </vdl-page>
+</vdl>

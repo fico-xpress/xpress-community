@@ -1,0 +1,34 @@
+<!--
+    Contains the background of the optimization problem.
+    
+    Copyright (c) 2025 Fair Isaac Corporation
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
+    Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+-->
+<vdl version="5">
+    <vdl-page>
+        <vdl-section id="welcome" layout="fluid">
+            <vdl-row>
+                <vdl-column>
+                    <h1><span vdl-text="Application Structure"></span></h1>
+                    <p></p><span vdl-text="The Soccer Camp Location application consists of the following 4 pages."></span>
+                    <ul>
+                        <li><span vdl-text="Introduction- Presents an overview of the application as well as the problem context."></span></li>
+                        <li><span vdl-text="Input- Contains the modifiable parameters and a view of the input data."></span></li>
+                        <li><span vdl-text="Results- Contains the execution results of the scenario at the leftmost position of the scenario manager, including overview of the training process, and summary of most frequent soccer camp locations."></span></li>
+                        <li><span vdl-text="Comparison- Contains charts and figures to compare among different scenarios."></span></li>
+                    </ul>
+                    <p></p>
+                    <h1><span vdl-text="Soccer camp location"></span></h1><button type="button" class="btn btn-secondary" onclick="insight.openView('Input');">Lets get started!</button>
+                    <p><span vdl-text="Every late spring, the city sets up soccer camps at local parks for students to attend after school. Interested students sign up on each day of the camp and a camp monitor is sent to the schools to pick them up and accompany them to the camp where a limited set of attendees can participate."></span></p>
+                    <p><span vdl-text="Because registration occurs on the same day, interest in attending is highly correlated to the weather. In addition, once a camp is setup at a park, incurring a fixed cost, it must remain there for the rest of the season.
+
+In the city, there are 5 schools and 11 nearby parks in which the city can setup a mobile soccer camp."></span></p>
+                    <p><span vdl-text="You're brought on to this project to support the city in their decision of where to locate soccer camps while accounting for costs, including camp setup costs and student pickup cost, as well as ensuring as few interested students as possible are excluded considering the variability of demand."></span></p>
+                    <p><span vdl-text="Surveys performed by experts has provided estimates of each school's  distribution of daily interest in attending soccer camp. 
+
+Your goal is to leverage all this information to create an application  to help the city select where to locate soccer camps for the season."></span></p><img alt="fico" src="images/formulation.png"></vdl-column>
+            </vdl-row>
+        </vdl-section>
+    </vdl-page>
+</vdl>

@@ -1,0 +1,8 @@
+# this file can be used on FICO Platform or for local installations to develop a Python/Insight app in Xpress Workbench.
+# Adjust the Python version and the package version to your needs.
+channels:
+  - fico-xpress
+dependencies:
+  - python=3.10
+  - xpressinsight
+  - xpress
