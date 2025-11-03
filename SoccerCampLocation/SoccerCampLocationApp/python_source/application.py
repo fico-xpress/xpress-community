@@ -34,6 +34,7 @@ class InsightApp(xi.AppBase):
     SchoolNumber: xi.types.Index(dtype=xi.string)
     SiteNumber: xi.types.Index(dtype=xi.string)
     
+    # Dataframe containing details of schools
     Schools: xi.types.DataFrame(index=['SchoolNumber'], columns =[
         xi.types.Column("demand_mean_estimate", dtype=xi.real, alias="Demand Mean Estimate"),
         xi.types.Column("demand_var_estimate", dtype=xi.real,  alias="Demand Variance Estimate"),
@@ -42,7 +43,8 @@ class InsightApp(xi.AppBase):
         xi.types.Column("coordinate_x", dtype=xi.real,  alias="X Coordinate"),
         xi.types.Column("coordinate_y", dtype=xi.real,  alias="Y Coordinate")
         ])
-    
+
+    # Dataframe containing details of sites
     Sites: xi.types.DataFrame(index=['SiteNumber'], columns =[
         xi.types.Column("capacity", dtype=xi.integer, alias="Site Capacity"),
         xi.types.Column("cost", dtype=xi.integer,  alias="Installation Cost"),

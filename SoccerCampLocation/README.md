@@ -41,7 +41,7 @@ The simulation captures:
 
 - It forces us to accept the inherent errors in our models by requiring training and empirically validating the performance of our models.
 
-- We'll see the benefit of training the model before running it in real life and the experimentation necessary to find the best training parameters.
+- We'll discuss the benefit of training the model before running it in real life and the experimentation necessary to find the best training parameters.
 
 ### Assignment
 Well discuss, the points in the framework where we can change/update the CFA policy and each team will attempt to come up with a new CFA by changing:
@@ -52,9 +52,9 @@ Well discuss, the points in the framework where we can change/update the CFA pol
 
 ## Data & Simulation
 
-In our framework, we assume the estimation of distribution parameters of uncertain demand can be incorrect, similar to what occurs in practice. i.e. Estimated $\neq$. This adds another layer of complexity that traditionally is not considered in academic settings where the estimated distribution is thought of as accurate.
+In our framework, we assume the estimation of distribution parameters of uncertain demand can be incorrect, similar to what occurs in practice. i.e. Estimated $\neq$ Actuals. This adds another layer of complexity that traditionally is not considered in academic settings where the estimated distribution is thought of as accurate.
 
-To capture this our optimization model uses the estimated distribution parameters, e.g. **estimated** average demand per school , while the simulation we execute and on which we train, will sample from a potentially different distribution, representing the **actual** distribution. 
+To capture this, our optimization model uses the estimated distribution parameters, e.g. **estimated** average demand per school , while the simulation we execute and on which we train, will sample from a potentially different distribution, representing the **actual** distribution. 
 
 The optimization model uses:
 
@@ -67,7 +67,7 @@ The optimization model uses:
 The simulation framework includes:
 - Demand sampling from actual distributions
 - Capacity deduction based on realized demand
-- Parameter/Penalty adjustment rules for iterative improvement
+- Parameter/penalty adjustment rules for iterative improvement
 
 
 ## Setup Instructions
@@ -79,7 +79,7 @@ The simulation framework includes:
 
 
 ### Jupyter Notebook Setup
-To run the jupyter notebook version simply execute the *setup.sh* script located in the root folder from Git Bash (Microsoft Windows) or a Terminal (other Unix based systems). If you have Python 3 installed, it will create a virtual environment in your folder, install all dependencies to it, open the jupyter notebook in your browser.
+To run the jupyter notebook version simply execute the *setup.sh* script located in the root folder from Git Bash (Microsoft Windows) or a Terminal (Unix based systems). If you have Python 3 installed, it will create a virtual environment in your folder, install all dependencies to it, open the jupyter notebook in your browser.
 
 ``If you are not allowed to run the script, ensure that the file has execution rights by running the following command.``
 
@@ -94,18 +94,9 @@ For Xpress Insight Setup that includes a UI participants would need the followin
 
 Xpress Insight is FICO Xpress’s deployment platform. It consists of a server, worker architecture that communicates through REST APIs. 
 
-We recommend the use of Xpress Insight docker images to run Insight locally on your computer. The repository containing this can be found here: https://github.com/fico-xpress/insight-docker.
+We recommend that you work with Xpress Insight docker images to run Insight locally on your computer. The repository containing the code and installation instructions can be found here: https://github.com/fico-xpress/insight-docker.
 
-Since we’ll be building applications using Python in a non-production environment, we recommend that you build the set of images under the folder “insight-local-conda-filesystem”.
-
-To do this, clone the repository into your local computer, enter the folder through a terminal and with docker running, execute `docker compose up`. 
-
-Note, this step may present errors such as TSL and/or certificate errors due to your company’s security certificates.
-
-If successful, this will produce three containers:
-- *server-1*: Contains Xpress Insight server to which users can connect to interact with the web app you created.
-- *workbench-1*: Contains Xpress Workbench IDE from which you develop and publish your web application.
-- *worker-1*: virtual machine that executes the solves in the back end.
+Since we’ll be building applications using Python in a non-production environment, we recommend that you build the set of images under the folder `insight-local-conda-filesystem`.
 
 Once the containers are running, you can connect to the Xpress Insight Server by going to http://localhost:8080/insight in your browser. You can sign in with the default credentials
 
@@ -117,10 +108,7 @@ Once the containers are running, you can connect to the Xpress Insight Server by
 
 To enable streamlined publishing from Xpress Workbench to Insight in one-click, you need to enable a direct connection from Workbench to the Server.
 
-To do this you must:
-1)	Retrieve the API credentials from Xpress Insight following [these instructions](https://www.fico.com/fico-xpress-optimization/docs/latest/dockerGuide/GUID-353CFC82-0458-4AAE-BB06-DF4148B22DEA.html).
-2)	Enter the credential information into your Mac’s Keychain following [these instructions](https://www.fico.com/fico-xpress-optimization/docs/latest/insight5_dev_guide/GUID-A0E5DBD8-8A2E-402F-B802-E82CCFB441ED.html).
-3)	In Workbench, configure the server to publish. This is by default http://localhost:8080 
+For instructions on how to do that please go to [this website](https://www.fico.com/fico-xpress-optimization/docs/latest/insight5_dev_guide/GUID-E2B8F462-930E-42D7-B2C3-599E1423FD82.html)
 
 This setup will include a container running Xpress Workbench named workbench-1 and another running the Insight client named server-1.
 #### FICO Xpress Insight
@@ -133,4 +121,4 @@ See source code files for copyright notices.
 
 ## License
 
-The examples in this repository are licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) for the full license text. Some examples use FICO® Xpress software. By running it, you agree to the Community License terms of the [Xpress Shrinkwrap License Agreement](https://www.fico.com/en/shrinkwrap-license-agreement-fico-xpress-optimization-suite-on-premises) with respect to the FICO® Xpress software. See the [licensing options](https://www.fico.com/en/fico-xpress-trial-and-licensing-options) overview for additional details and information about obtaining a paid license.
+The examples in this repository are licensed under the Apache License, Version 2.0. See [LICENSE](../LICENSE) for the full license text. Some examples use FICO® Xpress software. By running it, you agree to the Community License terms of the [Xpress Shrinkwrap License Agreement](https://www.fico.com/en/shrinkwrap-license-agreement-fico-xpress-optimization-suite-on-premises) with respect to the FICO® Xpress software. See the [licensing options](https://www.fico.com/en/fico-xpress-trial-and-licensing-options) overview for additional details and information about obtaining a paid license.
