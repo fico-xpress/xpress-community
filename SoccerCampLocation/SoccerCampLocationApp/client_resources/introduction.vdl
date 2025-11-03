@@ -16,7 +16,7 @@
                         <li><span vdl-text="Introduction- Presents an overview of the application as well as the problem context."></span></li>
                         <li><span vdl-text="Input- Contains the modifiable parameters and a view of the input data."></span></li>
                         <li><span vdl-text="Results- Contains the execution results of the scenario at the leftmost position of the scenario manager, including overview of the training process, and summary of most frequent soccer camp locations."></span></li>
-                        <li><span vdl-text="Comparison- Contains charts and figures to compare among different scenarios."></span></li>
+                        <li><span vdl-text="Comparison- Contains charts and figures to compare different scenarios."></span></li>
                     </ul>
                     <p></p>
                     <h1><span vdl-text="Soccer camp location"></span></h1><button type="button" class="btn btn-secondary" onclick="insight.openView('Input');">Lets get started!</button>

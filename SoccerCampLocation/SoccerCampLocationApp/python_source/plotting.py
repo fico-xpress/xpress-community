@@ -20,7 +20,7 @@ def draw_sol(folder:str, instance, built:dict, E:dict, iteration: int=None):
         instance (FixedInstance): The container with all the input data for which we are solving.
         built (dict): The dictionary of camp locations installed.
         E (dict): The dictionary containing the allocation of school demand to soccer camp location
-        iteration (int): The number of the iteration it is on. Used to keep track in the filename.
+        iteration (int): The current iteration count number. Used to keep track in the filename.
 
     Returns:
         None

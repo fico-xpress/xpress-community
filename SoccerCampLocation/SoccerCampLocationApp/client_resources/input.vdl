@@ -25,7 +25,7 @@
                 </vdl-column>
                 <vdl-column size="6">
                     <vdl-form>
-                        <vdl-field label="Update Step Size" label-size="5" entity="StepSize"></vdl-field>
+                        <vdl-field label="Update step size" label-size="5" entity="StepSize"></vdl-field>
                     </vdl-form>
                 </vdl-column>
             </vdl-row>
