@@ -139,7 +139,7 @@ constraint. The model is an LP.
 
 #### CVaR Objective
 
-$$\min \sum_{s \in S} \sum_{t \in T} \text{cost}_s \cdot \text{gen}_{s,t} + \text{risk\_weight} \cdot \left[ \text{var\_threshold} + \frac{1}{|\Omega'| \cdot \text{tail\_prob}} \sum_{\omega \in \Omega'} \text{cvar\_aux}_\omega \right]$$
+$$\min \sum_{s \in S} \sum_{t \in T} cost_s \cdot gen_{s,t} + risk\_weight \cdot \left[ var\_threshold + \frac{1}{|\Omega'| \cdot tail\_prob} \sum_{\omega \in \Omega'} cvar\_aux_\omega \right]$$
 
 #### Constraints
 
