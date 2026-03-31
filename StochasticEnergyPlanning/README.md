@@ -139,7 +139,7 @@ constraint. The model is an LP.
 
 #### CVaR Objective
 
-$$\min \underbrace{\sum_{s \in S} \sum_{t \in T} \text{cost}_s \cdot \text{gen}_{s,t}}_{\text{generation cost}} + \; \text{risk\_weight} \cdot \underbrace{\left[ \text{var\_threshold} + \frac{1}{|\Omega'| \cdot \text{tail\_prob}} \sum_{\omega \in \Omega'} \text{cvar\_aux}_\omega \right]}_{\text{CVaR of shortage cost}}$$
+$$\min \sum_{s \in S} \sum_{t \in T} \text{cost}_s \cdot \text{gen}_{s,t} + \text{risk\_weight} \cdot \left[ \text{var\_threshold} + \frac{1}{|\Omega'| \cdot \text{tail\_prob}} \sum_{\omega \in \Omega'} \text{cvar\_aux}_\omega \right]$$
 
 #### Constraints
 
