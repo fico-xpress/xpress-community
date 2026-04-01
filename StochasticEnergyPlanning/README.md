@@ -190,21 +190,9 @@ illustrative values, chosen to represent a realistic Ontario-like mix for educat
 Install Python dependencies:
 
 ```bash
-pip install xpress pymc arviz numpy pandas matplotlib xarray scipy netCDF4
+conda install -c fico-xpress xpress
+conda install -c conda-forge pymc netCDF4
 ```
-
-> **PyTensor / C++ compiler note:** PyMC compiles the model graph to C++ for gradient evaluation
-> during NUTS sampling. Without a C++ compiler, sampling falls back to pure Python and becomes
-> **10-50x slower** (several hours on this model). On Linux/macOS, `g++` is usually available by
-> default. On Windows, it can be installed via MSYS2:
->
-> ```bash
-> # In MSYS2 MINGW64 terminal:
-> pacman -S mingw-w64-x86_64-gcc
->
-> # Then add to Windows PATH:
-> C:\msys64\mingw64\bin
-> ```
 
 ### Running
 
