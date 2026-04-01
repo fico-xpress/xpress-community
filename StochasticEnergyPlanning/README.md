@@ -194,6 +194,16 @@ conda install -c fico-xpress xpress
 conda install -c conda-forge pymc netCDF4
 ```
 
+> **Why conda?** PyMC compiles the model graph to C++ via PyTensor. conda automatically
+> includes the required C compiler, avoiding manual setup. If you prefer pip:
+>
+> ```bash
+> pip install xpress pymc arviz numpy pandas matplotlib xarray scipy netCDF4
+> ```
+>
+> On Windows without a C++ compiler, NUTS sampling falls back to pure Python and becomes
+> significantly slower. See the [PyMC installation guide](https://www.pymc.io/projects/docs/en/latest/installation.html) for details.
+
 ### Running
 
 ```bash
