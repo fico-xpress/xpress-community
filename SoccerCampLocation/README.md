@@ -102,7 +102,7 @@ Once the containers are running, you can connect to the Xpress Insight Server by
 
 `User name: admin`
 
-`Password: admin123`
+`Pass: admin123`
 
 #### Credentials to publish to Xpress Insight from Workbench
 
@@ -115,10 +115,6 @@ This setup will include a container running Xpress Workbench named workbench-1 a
 
 
 
-## Legal
+## Legal and license requirements
 
-See source code files for copyright notices.
-
-## License
-
-The examples in this repository are licensed under the Apache License, Version 2.0. See [LICENSE](../LICENSE) for the full license text. Some examples use FICO® Xpress software. By running it, you agree to the Community License terms of the [Xpress Shrinkwrap License Agreement](https://www.fico.com/en/shrinkwrap-license-agreement-fico-xpress-optimization-suite-on-premises) with respect to the FICO® Xpress software. See the [licensing options](https://www.fico.com/en/fico-xpress-trial-and-licensing-options) overview for additional details and information about obtaining a paid license.
+See [legal and license requirements](../README.md#legal-and-license-requirements) in the main repository README.
