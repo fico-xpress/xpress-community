@@ -1,0 +1,13 @@
+arviz==1.1.0
+arviz-base==1.1.0
+arviz-plots==1.1.0
+arviz-stats==1.1.0
+matplotlib==3.10.8
+numpy==2.3.5
+pandas==2.3.3
+pymc==6.0.1
+pytensor==3.0.4
+scipy==1.17.0
+xarray==2025.12.0
+xpress==9.9.0
+xpresslibs==9.9.0

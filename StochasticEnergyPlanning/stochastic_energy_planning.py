@@ -228,12 +228,12 @@ def forecast() -> Path:
     # -- Posterior predictive check -------------------------------------------
 
     with model:
-        trace.extend(pm.sample_posterior_predictive(trace, var_names=["y"]))
+        ppc = pm.sample_posterior_predictive(trace, var_names=["y"])
 
-    y_pred = trace.posterior_predictive.y
+    y_pred = ppc.posterior_predictive.y
     y_pred_mean = y_pred.mean(dim=["chain", "draw"])
     y_pred_hdi = az.hdi(
-        trace.posterior_predictive, var_names=["y"], hdi_prob=HDI_PROB
+        ppc.posterior_predictive, var_names=["y"], prob=HDI_PROB
     ).y
 
     # -- Out-of-sample forecast: Jan-Jun 2026 ---------------------------------
@@ -267,7 +267,7 @@ def forecast() -> Path:
 
     fc_mean = forecast_trace.posterior_predictive.y.mean(dim=["chain", "draw"])
     fc_hdi = az.hdi(
-        forecast_trace.posterior_predictive, var_names=["y"], hdi_prob=HDI_PROB
+        forecast_trace.posterior_predictive, var_names=["y"], prob=HDI_PROB
     ).y
 
     from scipy.stats import skew
@@ -301,8 +301,8 @@ def forecast() -> Path:
     ax.plot(dates, y_pred_mean, label="Posterior mean", color="tab:blue", linewidth=1)
     ax.fill_between(
         dates,
-        y_pred_hdi.sel(hdi="lower"),
-        y_pred_hdi.sel(hdi="higher"),
+        y_pred_hdi.sel(ci_bound="lower"),
+        y_pred_hdi.sel(ci_bound="higher"),
         alpha=0.3,
         color="tab:blue",
         label="94% HDI",
@@ -320,8 +320,8 @@ def forecast() -> Path:
     )
     ax.fill_between(
         future_dates,
-        fc_hdi.sel(hdi="lower"),
-        fc_hdi.sel(hdi="higher"),
+        fc_hdi.sel(ci_bound="lower"),
+        fc_hdi.sel(ci_bound="higher"),
         alpha=0.3,
         color="tab:blue",
         label="94% HDI",

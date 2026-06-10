@@ -184,25 +184,24 @@ illustrative values, chosen to represent a realistic Ontario-like mix for educat
 
 - Python 3.10+
 - FICO Xpress Python API (`xpress`)
-- PyMC 5+ and ArviZ (only required for the forecasting step; skipped if the cached `.nc` file exists)
+- PyMC 6+ and ArviZ 1+ (only required for the forecasting step; skipped if the cached `.nc` file exists)
 - NumPy, pandas, matplotlib, xarray, scipy
 
-Install Python dependencies:
+Install exact pinned versions (recommended):
 
 ```bash
-conda install -c fico-xpress xpress
-conda install -c conda-forge pymc netCDF4
+pip install -r requirements.txt
 ```
 
-> **Why conda?** PyMC compiles the model graph to C++ via PyTensor. conda automatically
-> includes the required C compiler, avoiding manual setup. If you prefer pip:
->
-> ```bash
-> pip install xpress pymc arviz numpy pandas matplotlib xarray scipy netCDF4
-> ```
->
-> On Windows without a C++ compiler, NUTS sampling falls back to pure Python and becomes
-> significantly slower. See the [PyMC installation guide](https://www.pymc.io/projects/docs/en/latest/installation.html) for details.
+Or install without pinning:
+
+```bash
+pip install xpress xpresslibs pymc arviz numpy pandas matplotlib xarray scipy
+```
+
+> **Note for Windows users:** PyMC compiles the model graph to C++ via PyTensor. Without a C++
+> compiler, NUTS sampling falls back to pure Python and becomes significantly slower.
+> See the [PyMC installation guide](https://www.pymc.io/projects/docs/en/latest/installation.html) for details.
 
 ### Running
 
